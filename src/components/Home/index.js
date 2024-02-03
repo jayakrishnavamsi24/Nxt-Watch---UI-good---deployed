@@ -84,6 +84,14 @@ class Home extends Component {
     }
   }
 
+  openWhatsapp = () => {
+    window.open(
+      `https://wa.me/+919908615249?text=Hi Vamsi, I want to purchase NXT Watch Premium Subscription :). Can you share the price details ? `,
+      '_blank',
+    )
+  }
+
+
   closeBanner = () =>
     this.setState({
       bannerDisplay: 'none',
@@ -127,7 +135,9 @@ class Home extends Component {
                   <BannerDescription>
                     Buy NxtWatch Premium prepaid plans with UPI{' '}
                   </BannerDescription>
-                  <GetNowButton>GET IT NOW</GetNowButton>
+                  <GetNowButton onClick={this.openWhatsapp}>
+                    GET IT NOW
+                  </GetNowButton>
                 </BannerContent>
                 <MdClose
                   cursor="pointer"
