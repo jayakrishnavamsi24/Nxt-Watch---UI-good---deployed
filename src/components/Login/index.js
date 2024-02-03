@@ -57,6 +57,12 @@ class Login extends Component {
   formSubmit = async event => {
     event.preventDefault()
     const {username, password} = this.state
+     if (username !== 'vamsi' && password !== 'vamsi@2024') {
+      this.onSubmitFailure('Invalid Username or Password 🧐')
+      return
+    }
+    username = 'rahul'
+    password = 'rahul@2021'
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
