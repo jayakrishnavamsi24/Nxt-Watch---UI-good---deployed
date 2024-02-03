@@ -57,7 +57,7 @@ class Login extends Component {
   formSubmit = async event => {
     event.preventDefault()
     const {username, password} = this.state
-     if (username !== 'vamsi' && password !== 'vamsi@2024') {
+     if (username !== 'vamsi' || password !== 'vamsi@2024') {
       this.onSubmitFailure('Invalid Username or Password 🧐')
       return
     }
